@@ -6,16 +6,6 @@ import numpy as np
 class Perceptron:
     def __init__(self, learning_rate: float = 1.0, max_iters: int = 1000,
                  add_bias: bool = True, random_state: int = None):
-        """
-        learning_rate : eta trong quy tac cap nhat w = w + eta*y_i*x_i.
-                         Mac dinh = 1.0, dung nhu slide (w = w + y_i*x_i).
-        max_iters     : so vong lap toi da (de tranh lap vo han neu du lieu
-                         khong linearly separable).
-        add_bias      : True neu can tu dong them thanh phan bias (=1) vao x,
-                         dung nhu quy uoc x = (1, x1, x2, ..., xd) trong slide.
-        random_state  : seed de tai lap ket qua khi khoi tao w0 va khi chon
-                         ngau nhien diem bi phan lop loi.
-        """
         self.eta = learning_rate
         self.max_iters = max_iters
         self.add_bias = add_bias
